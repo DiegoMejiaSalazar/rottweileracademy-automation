@@ -1,4 +1,67 @@
+Feature: Student authentication
 
-0 scenarios
-0 steps
-0m0.000s
+  Background: Access to rottweiler academy               [90m# features/authentication.feature:2[0m
+    [32mGiven I have accessed to the rottweiler academy page[90m # features/step_definitions/authentication.rb:1[0m[0m
+    [32mWhen I select the option Iniciar Sesión[90m              # features/step_definitions/authentication.rb:5[0m[0m
+    [32mThen I should see a form of login[90m                    # features/step_definitions/authentication.rb:9[0m[0m
+
+  Scenario: Access using an existing account and using correct credentials                    [90m# features/authentication.feature:7[0m
+    [32mGiven I have put [32m[1m"diego.mejia@ucb.edu.bo"[0m[0m[32m in the field of direccion de correo electrónico[90m # features/step_definitions/authentication.rb:13[0m[0m
+    [32mAnd I have put [32m[1m"Diego1.abc"[0m[0m[32m in the field of Contraseña[90m                                    # features/step_definitions/authentication.rb:19[0m[0m
+    [32mWhen I select the option Acceder[90m                                                          # features/step_definitions/authentication.rb:25[0m[0m
+    [32mThen I should be able to see the name [32m[1m"diego"[0m[0m[32m[90m                                             # features/step_definitions/authentication.rb:29[0m[0m
+    [32mAnd I should be able to see my profile photo[90m                                              # features/step_definitions/authentication.rb:33[0m[0m
+
+  Scenario: Access using an existing account and using incorrect credentials                  [90m# features/authentication.feature:14[0m
+    [32mGiven I have put [32m[1m"diego.mejia@ucb.edu.bo"[0m[0m[32m in the field of direccion de correo electrónico[90m # features/step_definitions/authentication.rb:13[0m[0m
+    [32mAnd I have put [32m[1m"Diego1.abcd"[0m[0m[32m in the field of Contraseña[90m                                   # features/step_definitions/authentication.rb:19[0m[0m
+    [32mWhen I select the option Acceder[90m                                                          # features/step_definitions/authentication.rb:25[0m[0m
+    [32mThen I should be able to see an error message[90m                                             # features/step_definitions/authentication.rb:37[0m[0m
+    [32mThen I should be able to see the email [32m[1m"diego.mejia@ucb.edu.bo"[0m[0m[32m in the error message[90m      # features/step_definitions/authentication.rb:41[0m[0m
+
+  Scenario: Access using an unexisting account                                                             [90m# features/authentication.feature:22[0m
+    [32mGiven I have put [32m[1m"diego.mejia.salazar.doms@ucb.edu.bo"[0m[0m[32m in the field of direccion de correo electrónico[90m # features/step_definitions/authentication.rb:13[0m[0m
+    [32mAnd I have put [32m[1m"Diego1.abcd"[0m[0m[32m in the field of Contraseña[90m                                                # features/step_definitions/authentication.rb:19[0m[0m
+    [32mWhen I select the option Acceder[90m                                                                       # features/step_definitions/authentication.rb:25[0m[0m
+    [32mThen I should be able to see a message with [32m[1m"Dirección de correo electrónico desconocida"[0m[0m[32m[90m              # features/step_definitions/authentication.rb:45[0m[0m
+
+Feature: Course information
+
+  Background: Access to student account                                                     [90m# features/course_information.feature:2[0m
+    [32mGiven I have accessed to the rottweiler academy page[90m                                    # features/step_definitions/authentication.rb:1[0m[0m
+    [32mWhen I select the option Iniciar Sesión[90m                                                 # features/step_definitions/authentication.rb:5[0m[0m
+    [32mAnd I have put [32m[1m"diego.mejia@ucb.edu.bo"[0m[0m[32m in the field of direccion de correo electrónico[90m # features/step_definitions/authentication.rb:13[0m[0m
+    [32mAnd I have put [32m[1m"Diego1.abc"[0m[0m[32m in the field of Contraseña[90m                                  # features/step_definitions/authentication.rb:19[0m[0m
+    [32mWhen I select the option Acceder[90m                                                        # features/step_definitions/authentication.rb:25[0m[0m
+    [32mThen I should be able to see the name [32m[1m"diego"[0m[0m[32m[90m                                           # features/step_definitions/authentication.rb:29[0m[0m
+    [32mAnd I should be able to see my profile photo[90m                                            # features/step_definitions/authentication.rb:33[0m[0m
+
+  Scenario Outline: Access to a course              [90m# features/course_information.feature:11[0m
+[36m    Given I am in the course tab[0m                    [90m# features/course_information.feature:12[0m
+[36m    When I select the course "<course>"[0m             [90m# features/course_information.feature:13[0m
+[36m    Then I should see the instructor "<instructor>"[0m [90m# features/course_information.feature:14[0m
+[36m    And I see in the sections part "<sections>"[0m     [90m# features/course_information.feature:15[0m
+[36m    And I see the price of "<price>"[0m                [90m# features/course_information.feature:16[0m
+
+    Examples: 
+      | course                               | instructor | sections    | price   |
+      [32m| Adobe illustrator                    | Sebastián  | 1 Lección   | Bs. 150 |[0m
+      [32m| Como decorar con neón                | Sebastián  | 1 Lección   | Bs. 150 |[0m
+      [31m| Como hacer milkshakes                | Sebastián  | 1 Lección   | Bs. 1   |[0m
+[31m      expected: truthy value[0m
+[31m           got: false (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      ./features/step_definitions/course_information.feature.rb:18:in `nil'[0m
+[31m      features/course_information.feature:21:16:in `I see the price of "Bs. 1"'[0m
+      [31m| Curso básico de Robótica con Arduino | Sebastián  | 4 Lecciones | Libre   |[0m
+[31m      expected: truthy value[0m
+[31m           got: false (RSpec::Expectations::ExpectationNotMetError)[0m
+[31m      ./features/step_definitions/course_information.feature.rb:10:in `nil'[0m
+[31m      features/course_information.feature:22:14:in `I should see the instructor "Sebastián"'[0m
+
+[31mFailing Scenarios:[0m
+[31mcucumber features/course_information.feature:21[0m[90m # Scenario Outline: Access to a course[0m
+[31mcucumber features/course_information.feature:22[0m[90m # Scenario Outline: Access to a course[0m
+
+7 scenarios ([31m2 failed[0m, [32m5 passed[0m)
+71 steps ([31m2 failed[0m, [36m2 skipped[0m, [32m67 passed[0m)
+2m0.541s
