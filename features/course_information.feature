@@ -15,8 +15,8 @@ Feature: Course information
     And I see in the sections part "<sections>"
     And I see the price of "<price>"
     Examples:
-      | course                               | instructor | sections    | price   |
-      | Adobe illustrator                    | Sebastián  | 1 Lección   | Bs. 150 |
-      | Como decorar con neón                | Sebastián  | 1 Lección   | Bs. 150 |
-      | Como hacer milkshakes                | Sebastián  | 1 Lección   | Bs. 1   |
-      | Curso básico de Robótica con Arduino | Sebastián  | 4 Lecciones | Libre   |
+      | course                               | instructor             | sections    | price   |
+      | Adobe illustrator                    | Sebastián              | 1 Lección   | Bs. 150 |
+      | Como decorar con neón                | Sebastián              | 1 Lección   | Bs. 150 |
+      | Como hacer milkshakes                | Sebastián              | 1 Lección   | Bs. 1   |
+      | Curso básico de Robótica con Arduino | rottweilergroupbolivia | 4 Lecciones | Libre   |
