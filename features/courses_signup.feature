@@ -1,4 +1,10 @@
 Feature: Mark course as completed
+
+  Como estudiante
+  quiero marcar un curso como completado
+  para tener un seguimiento de mi aprendizaje
+  # SE DESCONTINUO DEBIDO A ALGUNAS DEFICIENCIAS QUE TIENE EL SERVICDOR DE EMAILS LO QUE GENERABA QUE ESTE TEST TOME
+  # LARGOS PERIODOS DE TIEMPO
 #  Scenario: Registering a new student
 #    Given I am in the Register form
 #    When I have put "rottweilerusuariodemo@gmail.com" as my new student account email
@@ -19,6 +25,8 @@ Feature: Mark course as completed
 #    And I select the option Activar
 #    And I click on Entra en el sistema
 #    Then The message "Cuenta activada" should be displayed in the activation form
+
+
   Background:
     Given I select the option Iniciar Sesión
     And I have put "rottweilerusuariodemo@gmail.com" in the field of direccion de correo electrónico

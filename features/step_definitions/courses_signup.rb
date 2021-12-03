@@ -110,6 +110,7 @@ end
 
 
 When('I selecct the option Marcar como completado') do
+  sleep(10)
   page.find(:xpath, '//*[@id="learndash-page-content"]/div/div/div[2]/div[2]/div/form/input[4]').click
   sleep(10)
 end

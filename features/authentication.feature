@@ -1,8 +1,12 @@
 Feature: Student authentication
+    Como estudiante
+    quiero ingresar a mi cuenta de rottweiler academy
+    para poder ver los cursos de mi interes
+
     Background: Access to rottweiler academy
         Given I have accessed to the rottweiler academy page
-        When I select the option Iniciar Sesión
-        Then I should see a form of login
+        And I select the option Iniciar Sesión
+        And I should see a form of login
 
       Scenario: Access using an existing account and using correct credentials
         Given I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico
@@ -15,7 +19,6 @@ Feature: Student authentication
         Given I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico
         And I have put "Diego1.abcd" in the field of Contraseña
         When I click on "Acceder"
-        Then I should be able to see an error message
         Then I should be able to see the email "diego.mejia@ucb.edu.bo" in the error message
 
 

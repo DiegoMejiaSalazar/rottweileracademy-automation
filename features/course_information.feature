@@ -1,11 +1,16 @@
 Feature: Course information
+
+  Como estudiante
+  quiero poder ver la información del curso como el nombre del profesor, precio del curso, cantidad de lecciones
+  para poder ver si un curso vale la pena tomarlo
+
   Background: Access to student account
     Given I have accessed to the rottweiler academy page
-    When I select the option Iniciar Sesión
+    And I select the option Iniciar Sesión
     And I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico
     And I have put "Diego1.abc" in the field of Contraseña
     And I select the option "Acceder"
-    Then I should be able to see the name "diego"
+    And I should be able to see the name "diego"
     And I should be able to see my profile photo
 
   Scenario Outline: Access to a course

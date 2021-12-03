@@ -1,4 +1,8 @@
 Feature: Course information
+  Como estudiante
+  quiero poder cerrar sesión
+  para evitar que terceras personas cambien mi informacion personal o realizen actividades indevidas con mi perfil
+
   Scenario: Logout given a user that logged in
     Given I have accessed to the rottweiler academy page
     When I select the option Iniciar Sesión

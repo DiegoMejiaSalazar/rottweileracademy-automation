@@ -1,5 +1,9 @@
 Feature: Filter courses
 
+  Como usuario(anonimo, estudiante)
+  quiero poder filtrar cursos
+  para poder encontrar cursos segun el area de mi interes y como tambien segun el profesor con el que me sienta mas comodo
+
   Scenario: Filter course given a logged in student
     When I select the option Iniciar Sesión
     And I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico

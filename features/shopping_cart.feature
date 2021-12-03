@@ -1,4 +1,9 @@
 Feature: Buy courses
+
+  Como estudiante
+  quiero poder comprar cursos
+  para poder aprender nuevas cosas
+
   Background:
     Given I select the option Iniciar Sesión
     And I have put "rottweilerusuariodemo@gmail.com" in the field of direccion de correo electrónico
