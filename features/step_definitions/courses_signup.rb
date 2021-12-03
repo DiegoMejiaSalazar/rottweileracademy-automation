@@ -120,7 +120,9 @@ end
 
 When('I click on Añadir al carrito') do
   sleep(5)
-  page.find(:xpath, '//*[@id="product-856"]/div[2]/form/button').click
+  within ".cart" do
+    first(:button, "Añadir al carrito").click
+  end
   sleep(5)
 end
 
