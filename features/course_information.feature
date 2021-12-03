@@ -4,7 +4,7 @@ Feature: Course information
     When I select the option Iniciar Sesión
     And I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico
     And I have put "Diego1.abc" in the field of Contraseña
-    And I select the option Acceder
+    And I select the option "Acceder"
     Then I should be able to see the name "diego"
     And I should be able to see my profile photo
 

@@ -9,6 +9,7 @@ end
 Capybara.default_driver = :chrome
 Capybara.default_selector = :css
 
+
 Before do
   visit "https://www.r-acad.com/"
 end

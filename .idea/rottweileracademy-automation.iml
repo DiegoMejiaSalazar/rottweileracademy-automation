@@ -27,6 +27,7 @@
     <orderEntry type="library" scope="PROVIDED" name="cucumber-wire (v6.2.0, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.4.4, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.4, ruby-3.0.2-p107) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mailslurp_client (v11.16666.0, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.4.1, ruby-3.0.2-p107) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2021.1115, ruby-3.0.2-p107) [gem]" level="application" />

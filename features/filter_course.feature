@@ -1,11 +1,10 @@
 Feature: Filter courses
 
   Scenario: Filter course given a logged in student
-    Given I have accessed to the rottweiler academy page
     When I select the option Iniciar Sesión
     And I have put "diego.mejia@ucb.edu.bo" in the field of direccion de correo electrónico
     And I have put "Diego1.abc" in the field of Contraseña
-    And I select the option Acceder
+    And I select the option "Acceder"
     And I select the option Cursos
     And I select the option "Alfabético" of the course left filter
     And I select the option "Diseño" of the course middle filter
@@ -15,7 +14,6 @@ Feature: Filter courses
     But I should not be able to see the course "Word"
 
   Scenario: Filter course given an anonymus user
-    Given I have accessed to the rottweiler academy page
     When I select the option Cursos
     And I select the option "Recién creado" of the course left filter
     And I select the option "Cocina y repostería" of the course middle filter

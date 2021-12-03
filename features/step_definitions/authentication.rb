@@ -22,10 +22,6 @@ Given('I have put {string} in the field of Contraseña') do |pass|
   end
 end
 
-When('I select the option Acceder') do
-  click_on("Acceder")
-end
-
 Then('I should be able to see the name {string}') do |name|
   expect(find(:xpath, '//*[@id="header-aside"]/div/div[1]/a/span').text).to eql name
 end
@@ -44,4 +40,12 @@ end
 
 Then('I should be able to see a message with {string}') do |message|
   expect(find(:xpath, '//*[@id="login_error"]').text.include? message).to be_truthy
+end
+
+Then('The message {string} should be displayed in the activation form') do |message|
+  url = URI.parse(current_url).to_s
+  puts("-----------------------")
+  puts(url)
+  puts("-----------------------")
+  expect(page.has_content?(message)).to be_truthy
 end

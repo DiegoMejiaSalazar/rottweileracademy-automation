@@ -2,8 +2,8 @@ When('I click on the name {string}') do |name|
   click_on(name)
 end
 
-When('I click on {string}') do |logout_option|
-  click_on(logout_option)
+When('I click on {string}') do |option|
+  click_on(option)
 end
 
 Then('I should be able to see the rottweiler page') do
