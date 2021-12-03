@@ -44,4 +44,3 @@ Feature: Mark course as completed
     And I selecct the option Marcar como completado
     Then I should see the option "Completado"
 
-

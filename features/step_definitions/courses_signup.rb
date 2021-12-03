@@ -118,6 +118,12 @@ When('I click on {string} of the lessons') do |lesson|
   page.all("div", :text => lesson).last.click
 end
 
+When('I click on Añadir al carrito') do
+  sleep(5)
+  page.find(:xpath, '//*[@id="product-856"]/div[2]/form/button').click
+  sleep(5)
+end
+
 Then('I should be in rottwerileracademy') do
   expect(page.has_content?('¡Tu cuenta ya está activa!')).to be_truthy
 end
