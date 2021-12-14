@@ -1,7 +1,7 @@
 Feature: Find course
-  Como estudiante
-  quiero poder filtrar
-  los cursos para poder encontrar el curso de mi interes de manera mas rápida
+  As a student
+  I want to find a curse by it's name or description
+  So that I don't waste time finding courses of my interest
 
   Background:
     Given I am in the course tab

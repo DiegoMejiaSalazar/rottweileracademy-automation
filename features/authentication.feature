@@ -1,7 +1,7 @@
 Feature: Student authentication
-    Como estudiante
-    quiero ingresar a mi cuenta de rottweiler academy
-    para poder ver los cursos de mi interes
+    As a student
+    I want to access to my rottweiler account
+    so that I can find courses that I am interested
 
     Background: Access to rottweiler academy
         Given I have accessed to the rottweiler academy page

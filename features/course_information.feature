@@ -1,8 +1,8 @@
 Feature: Course information
 
-  Como estudiante
-  quiero poder ver la información del curso como el nombre del profesor, precio del curso, cantidad de lecciones
-  para poder ver si un curso vale la pena tomarlo
+  As a student
+  I want to see the information of a course like the teacher name, price, and the amount of lessons
+  so that I can know if the course is worth it
 
   Background: Access to student account
     Given I have accessed to the rottweiler academy page

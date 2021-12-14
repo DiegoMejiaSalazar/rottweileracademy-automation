@@ -1,8 +1,8 @@
 Feature: Filter courses
 
-  Como usuario(anonimo, estudiante)
-  quiero poder filtrar cursos
-  para poder encontrar cursos segun el area de mi interes y como tambien segun el profesor con el que me sienta mas comodo
+  As a user(anonymus, student)
+  I want to filter coourses
+  So that I can find courses of my specific area or teacher that I am interested
 
   Scenario: Filter course given a logged in student
     When I select the option Iniciar Sesión

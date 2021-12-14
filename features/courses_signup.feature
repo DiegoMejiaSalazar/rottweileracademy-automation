@@ -1,8 +1,7 @@
 Feature: Mark course as completed
-
-  Como estudiante
-  quiero marcar un curso como completado
-  para tener un seguimiento de mi aprendizaje
+  As a student
+  I want to complete a course
+  So that I can keep track of my learning
   # SE DESCONTINUO DEBIDO A ALGUNAS DEFICIENCIAS QUE TIENE EL SERVICDOR DE EMAILS LO QUE GENERABA QUE ESTE TEST TOME
   # LARGOS PERIODOS DE TIEMPO
 #  Scenario: Registering a new student

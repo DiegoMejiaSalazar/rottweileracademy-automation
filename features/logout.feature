@@ -1,7 +1,7 @@
 Feature: Course information
-  Como estudiante
-  quiero poder cerrar sesión
-  para evitar que terceras personas cambien mi informacion personal o realizen actividades indevidas con mi perfil
+  As a student
+  I want to be able to log out
+  to prevent third parties from changing my personal information or performing improper activities with my profile.
 
   Scenario: Logout given a user that logged in
     Given I have accessed to the rottweiler academy page

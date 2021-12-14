@@ -1,8 +1,8 @@
 Feature: Buy courses
 
-  Como estudiante
-  quiero poder comprar cursos
-  para poder aprender nuevas cosas
+  As a student
+  I want to be able to buy courses
+  to be able to learn new things
 
   Background:
     Given I select the option Iniciar Sesión

@@ -1,8 +1,8 @@
 Feature: Find passed events
 
-  Como estudiante
-  quiero poder buscar eventos
-  para poder ver cursos de mi interes que se van a inagurar en determinadas fechas
+  As a student
+  I want to be able to search for events
+  to be able to see courses of my interest that are opening on certain dates.
 
   Background:
     Given I select the option "Eventos"

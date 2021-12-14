@@ -1,4 +1,9 @@
 Feature: Find events
+
+  As a user(anonymus, student)
+  I want to find events
+  So that I can find future courses or events that will happen in a point of time
+
   Background:
     Given I select the option "Eventos"
 
