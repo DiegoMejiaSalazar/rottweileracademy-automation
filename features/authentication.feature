@@ -21,7 +21,6 @@ Feature: Student authentication
         When I click on "Acceder"
         Then I should be able to see the email "diego.mejia@ucb.edu.bo" in the error message
 
-
       Scenario: Access using an unexisting account
         Given I have put "diego.mejia.salazar.doms@ucb.edu.bo" in the field of direccion de correo electrónico
         And I have put "Diego1.abcd" in the field of Contraseña

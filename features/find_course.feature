@@ -6,7 +6,7 @@ Feature: Find course
   Background:
     Given I am in the course tab
 
- Scenario Outline: Find a course a word
+ Scenario Outline: Find a course by word
       When I type "<course>" in the field Buscar cursos
       Then I should be able to see the course "<expected_course>"
       Examples:
