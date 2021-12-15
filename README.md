@@ -32,4 +32,4 @@ El proyecto se divide en dos partes:
 
 ## Como hacer correr el proyecto
 
-> cucumber features --format html --out reports
+> cucumber features --format html --out reports.html
